@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+     <!-- === Services Page === -->
+     <record id="rooms_page" model="website.page">
+         <field name="name">Rooms page</field>
+         <field name="website_published">True</field>
+         <field name="url">/rooms</field>
+         <field name="type">qweb</field>
+         <field name="key">theme_hiroto.rooms_page</field>
+         <field name="arch" type="xml">
+             <t t-name="theme_hiroto.rooms_page_template">
+                 <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Our Rooms</h1>
+                            <ul class="rooms">
+                                <li>Cloud Hosting</li>
+                                <li>Support</li>
+                                <li>Unlimited space</li>
+                            </ul>
+                        </div>
+
+                      
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+             </t>
+         </field>
+     </record>
+
+    <record id="rooms_page_link" model="website.menu">
+        <field name="name">Rooms</field>
+        <field name="page_id" ref="theme_hiroto.rooms_page"/>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">40</field>
+    </record>
+
+ </odoo>

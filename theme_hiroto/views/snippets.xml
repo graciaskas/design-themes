@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <template id="s_testimonial" name="Testimonial snippet">
+        <section class="s_testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                        <img alt="client" class="rounded-circle img-fluid w-100" src="/theme_hiroto/static/src/img/rooms/room-1.jpg"/>
+                        <h3>Room 01</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img alt="client" class="rounded-circle img-fluid w-100" src="/theme_hiroto/static/src/img/rooms/room-2.jpg"/>
+                        <h3>Room 02</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img alt="client" class="rounded-circle img-fluid w-100" src="/theme_hiroto/static/src/img/rooms/room-3.jpg"/>
+                        <h3>Room 03</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
+        <xpath 
+            expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" 
+            position="inside">
+            <t 
+                t-snippet="theme_hiroto.s_testimonial"
+                t-thumbnail="/theme_hiroto/static/src/img/ui/snippet_thumb.jpg"
+            />
+        </xpath>
+    </template>
+
+    <template id="s_testimonial_opt" name="Snippet Testimonial Options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='background']" position="after">
+            <div data-js="s_testimonial_options" data-selector=".s_testimonial"> <!-- Options group -->
+                <div class="dropdown-submenu">
+                    <a href="#" class="dropdown-item">Your Option</a>
+                    <div class="dropdown-menu"><!-- Options list -->
+                        <a href="#" class="dropdown-item" data-select-class="opt_shadow">Shadow Images</a>
+                        <a href="#" class="dropdown-item" data-select-class="opt_grey_bg">Grey Bg</a>
+                        <a href="#" class="dropdown-item" data-select-class="">None</a>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

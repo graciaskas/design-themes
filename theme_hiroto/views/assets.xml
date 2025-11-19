@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" name="My style" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link rel="stylesheet" href="/theme_hiroto/static/css/font-awesome.min.css" type="text/css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/css/nice-select.css" type="text/css"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/css/slicknav.min.css"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/css/owl.carousel.min.css"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/css/style.css"/>
+            <!-- <link rel="stylesheet" href="/theme_hiroto/static/css/font-awesome.min.css" type="text/css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/css/elegant-icons.css" type="text/css"/>
+            
+            <link rel="stylesheet" href="/theme_hiroto/static/css/jquery-ui.min.css" type="text/css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/css/owl.carousel.min.css" type="text/css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/css/slicknav.min.css" type="text/css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/css/style.css" type="text/css"/> -->
+            
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+            <!-- <script src="/theme_hiroto/static/src/js/jquery-3.3.1.min.js"></script> -->
+            <script src="/theme_hiroto/static/src/js/bootstrap.min.js"></script>
+            <script src="/theme_hiroto/static/src/js/jquery.nice-select.min.js"></script>
+            <script src="/theme_hiroto/static/src/js/jquery-ui.min.js"></script>
+            <script src="/theme_hiroto/static/src/js/jquery.slicknav.js"></script>
+            <script src="/theme_hiroto/static/src/js/owl.carousel.min.js"></script>
+            <script src="/theme_hiroto/static/src/js/main.js"></script>
+        </xpath>
+    </template>
+
+    
+
+    <template id="_assets_primary_variables" name="My SCSS variables" inherit_id="website._assets_primary_variables">
+        <xpath expr="link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/scss/primary_variables.scss"/>
+        </xpath>
+    </template>
+
+    <template id="_assets_frontend_helpers" inherit_id="website._assets_frontend_helpers">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/src/scss/bootstrap_overridden.scss"/>
+        </xpath>
+    </template>
+    <template id="my_js" inherit_id="website.assets_editor" name="My Js">
+    <xpath expr="script[last()]" position="after">
+        <script type="text/javascript" src="/theme_hiroto/static/src/js/tutorial_editor.js" />
+
+        
+    </xpath>
+</template>
+</odoo>
