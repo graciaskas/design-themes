@@ -3336,3 +3336,8 @@ ol {
     margin-bottom: 15px;
   }
 }
+
+.o_footer_copyright {
+  background-color: #000000 !important;
+  color: #fff !important;
+}
