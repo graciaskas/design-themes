@@ -15,7 +15,7 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
             <a href="/">
-                <img src="/theme_hiroto/static/src/img/logo.png" alt=""/></a>
+                <img src="/theme_hiroto/static/src/img/logo.png" alt="" class="img-fluid"/></a>
         </div>
         <nav class="offcanvas__menu mobile-menu">
             <ul>
@@ -99,17 +99,26 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="footer__about">
                                         <div class="footer__logo">
-                                            <a href="#"><img src="/theme_hiroto/static/src/img/logo.png" alt=""/></a>
+                                            <a href="#">
+                                                <img src="/theme_hiroto/static/src/img/logo.png" 
+                                                alt="Logo chife hotel goma" class="img-fluid" width="40"/></a>
                                         </div>
-                                        <h4>(123) 456-78-91096</h4>
+                                        <h4>(+243) 99 0121 302</h4>
                                         <ul>
-                                            <li>Ernser Vista Suite 437, NY</li>
-                                            <li>Info.colorlib@gmail.com</li>
+                                            <li>
+                                                48, Q. Le Volcans / DGDA Entrance, Goma Commune
+                                                Goma City N-K
+                                                DR. of the Congo
+                                            </li>
+                                            <li>info@chifehotel.com</li>
                                         </ul>
                                         <div class="footer__social">
                                             <a href="#"><i class="fa fa-facebook"></i></a>
                                             <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                            <a 
+                                                target="_blank" 
+                                                href="https://www.instagram.com/chifehotel?igsh=bmMzY3U4cWxlNDd6&amp;utm_source=qr"
+                                                ><i class="fa fa-instagram"></i></a>
                                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                                         </div>
                                     </div>

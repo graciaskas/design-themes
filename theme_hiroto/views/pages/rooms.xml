@@ -14,21 +14,21 @@
                  <t t-call="website.layout">
                     <div id="wrap">
                          <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option set-bg" data-setbg="/theme_hiroto/static/src/img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h1>Our Room</h1>
-                        <div class="breadcrumb__links">
-                            <a href="/">Home</a>
-                            <span>Rooms</span>
+                        <div class="breadcrumb-option set-bg" data-setbg="/theme_hiroto/static/src/img/breadcrumb-bg.jpg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <div class="breadcrumb__text">
+                                            <h1>Our Room</h1>
+                                            <div class="breadcrumb__links">
+                                                <a href="/">Home</a>
+                                                <span>Rooms</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Breadcrumb End -->
 
     <!-- Rooms Section Begin -->
@@ -149,7 +149,7 @@
         <field name="name">Rooms</field>
         <field name="page_id" ref="theme_hiroto.rooms_page"/>
         <field name="parent_id" ref="website.main_menu" />
-        <field name="sequence" type="int">40</field>
+        <field name="sequence" type="int">70</field>
     </record>
 
  </odoo>
