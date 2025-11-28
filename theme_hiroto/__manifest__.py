@@ -10,6 +10,7 @@
         "views/layout.xml",
         "views/snippets.xml",
         "views/pages/index.xml",
-        "views/pages/rooms.xml"
+        "views/pages/rooms.xml",
+        "views/pages/about-us.xml"
     ],
 }

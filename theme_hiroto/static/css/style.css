@@ -197,6 +197,26 @@ ol {
 /*---------------------
   Header
 -----------------------*/
+header#top {
+}
+
+header#top nav {
+  background-color: #000000 !important;
+
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  border: none !important;
+}
+
+header#top nav a {
+  color: #fff !important;
+  font-size: 1rem;
+  font-weight: bold !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("/theme_hiroto/static/img/icon-bar.png") !important;
+}
 
 .header__top__widget {
   padding: 14px 0 12px;

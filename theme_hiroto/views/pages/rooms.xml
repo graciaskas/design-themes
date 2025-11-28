@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-
      <!-- === Services Page === -->
      <record id="rooms_page" model="website.page">
          <field name="name">Rooms page</field>
@@ -13,22 +12,66 @@
              <t t-name="theme_hiroto.rooms_page_template">
                  <t t-call="website.layout">
                     <div id="wrap">
+                        <div class="oe_structure">
                          <!-- Breadcrumb Begin -->
+                          <section>
                         <div class="breadcrumb-option set-bg" data-setbg="/theme_hiroto/static/src/img/breadcrumb-bg.jpg">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
                                         <div class="breadcrumb__text">
-                                            <h1>Our Room</h1>
+                                            <h1>Our Rooms</h1>
                                             <div class="breadcrumb__links">
                                                 <a href="/">Home</a>
                                                 <span>Rooms</span>
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                    <div class="col-lg-12 py-3">
+                                        <form id="book__form" action="/rooms/check" method="post" class="filter__form">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <div class="filter__form__item filter__form__item--search">
+                                                <p>Room</p>
+                                                <div class="filter__form__input">
+                                                    <input type="text" placeholder="Search Room"/>
+                                                    <span class="icon_search"></span>
+                                                </div>
+                                            </div>
+                                            <div class="filter__form__item">
+                                                <p>Check In</p>
+                                                <div class="filter__form__datepicker">
+                                                    <span class="icon_calendar"></span>
+                                                    <input t-att-min='today' type="text" class="datepicker_pop check__in" id="checkin_date" name="checkin_date" required="1"/>
+                                                    <i class="arrow_carrot-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="filter__form__item">
+                                                <p>Check Out</p>
+                                                <div class="filter__form__datepicker">
+                                                    <span class="icon_calendar"></span>
+                                                    <input t-att-min='today' type="text" id="checkout_date" name="checkout_date" required="1" class="datepicker_pop check__out"/>
+                                                    <i class="arrow_carrot-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="filter__form__item filter__form__item--select" name="category_select">
+                                                <p>Category</p>
+                                                <div class="filter__form__select">
+                                                    <span class="icon_group"></span>
+                                                    <select id="room_type" name="room_type">
+                                                        <option value="">2 Adult, 1 Children</option>
+                                                        <option value="">2 Adult</option>
+                                                        <option value="">1 Adult</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button type="submit">BOOK NOW</button>
+                                        </form>
+                                            </div>
                                 </div>
                             </div>
                         </div>
+                        </section>
     <!-- Breadcrumb End -->
 
     <!-- Rooms Section Begin -->
@@ -138,7 +181,7 @@
     <!-- Rooms Section End -->
 
                       
-                        <div class="oe_structure" />
+                       </div>
                     </div>
                 </t>
              </t>
@@ -149,7 +192,7 @@
         <field name="name">Rooms</field>
         <field name="page_id" ref="theme_hiroto.rooms_page"/>
         <field name="parent_id" ref="website.main_menu" />
-        <field name="sequence" type="int">70</field>
+        <field name="sequence" type="int">90</field>
     </record>
 
  </odoo>
