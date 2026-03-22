@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-        <template id="s_hero_section" name="Hero Section">
+    
+    <template id="s_hero_section" name="Hero Section">
     
             <div class="oe_snippet_body">
                 <!-- Hero Section Snippet -->
@@ -61,12 +62,4 @@
             </div>
        
      </template>
-    
-    <template id="snippet_structure" inherit_id="website.snippets" name="Hero Snippet Menu">
-        <xpath expr="//div[@id='snippet_structure']/div" position="inside">
-            <t t-snippet="theme_hiroto.s_hero_section"
-               t-thumbnail="/theme_hiroto/static/src/img/hero.jpg"/>
-        </xpath>
-    </template>
-
 </odoo>

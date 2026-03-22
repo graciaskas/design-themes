@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <!-- === Services Page === -->
+    <record id="gallery_page" model="website.page">
+         <field name="name">Gallery page</field>
+         <field name="website_published">True</field>
+         <field name="url">/gallery</field>
+         <field name="type">qweb</field>
+         <field name="key">theme_hiroto.gallery_page</field>
+         <field name="arch" type="xml">
+            <t t-name="theme_hiroto.gallery_page_template">
+                 <t t-call="website.layout">
+                    <div id="wrap">
+                       
+                         <section>
+                            <div class="breadcrumb-option set-bg" data-setbg="/theme_hiroto/static/src/img/breadcrumb-bg.jpg">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <div class="breadcrumb__text">
+                                                <h1>Notre galerie</h1>
+                                                <div class="breadcrumb__links">
+                                                    <a href="/">Home</a>
+                                                    <span>Gallery</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-12 py-3">
+                                            <form id="book__form" action="/rooms/check" method="post" class="filter__form">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                <div class="filter__form__item filter__form__item--search">
+                                                    <p>Catégorie</p>
+                                                    <div class="filter__form__input">
+                                                        <input type="text" placeholder="Search Room"/>
+                                                        <span class="icon_search"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__form__item">
+                                                    <p>Arrivé</p>
+                                                    <div class="filter__form__datepicker">
+                                                        <span class="icon_calendar"></span>
+                                                        <input t-att-min='today' type="text" class="datepicker_pop check__in" id="checkin_date" name="checkin_date" required="1"/>
+                                                        <i class="arrow_carrot-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__form__item">
+                                                    <p>Départ</p>
+                                                    <div class="filter__form__datepicker">
+                                                        <span class="icon_calendar"></span>
+                                                        <input t-att-min='today' type="text" id="checkout_date" name="checkout_date" required="1" class="datepicker_pop check__out"/>
+                                                        <i class="arrow_carrot-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__form__item filter__form__item--select" name="category_select">
+                                                    <p>Adultes</p>
+                                                    <div class="filter__form__select">
+                                                        <span class="icon_group"></span>
+                                                        <select id="room_type" name="room_type">
+                                                            <option value="">2 Adultes, 1 Children</option>
+                                                            <option value="">2 Adultes</option>
+                                                            <option value="">1 Adult</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <button type="submit">BOOK NOW</button>
+                                            </form>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Gallery Section Begin -->
+                            <section class="gallery spad">
+                                <div class="gallery__text">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="section-title">
+                                                    <h5>NOTRE GALERIE</h5>
+                                                    <h2>Explorez les plus beaux endroits de l'hôtel</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="gallery__title">
+                                                    <p>
+                                                        Parcourez notre galerie et découvrez l'atmosphère unique de notre établissement. Des chambres élégantes aux espaces de détente, chaque cliché témoigne de notre engagement pour 
+                                                        votre confort et votre bien-être au cœur de Goma.
+                                                    </p>
+                                                    <a href="/gallery" class="primary-btn">View Gallery <span class="arrow_right"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery__slider owl-carousel">
+                                    <div class="gallery__item small__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-1.jpg"></div>
+                                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-2.jpg"></div>
+                                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-3.jpg"></div>
+                                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-7.jpg"></div>
+                                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-6.jpg"></div>
+                                </div>
+                            </section>
+                        <!-- Gallery Section End -->
+
+                      
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+             </t>
+         </field>
+     </record>
+
+    <record id="gallery_page_link" model="website.menu">
+        <field name="name">Gallerie</field>
+        <field name="page_id" ref="theme_hiroto.gallery_page"/>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">102</field>
+    </record>
+
+ </odoo>

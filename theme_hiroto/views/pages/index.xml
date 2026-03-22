@@ -2,59 +2,61 @@
 <odoo>
    <template id="homepage" inherit_id="website.homepage">
         <xpath expr="//div[@id='wrap']" position="replace">
-            <div id="wrap" class="oe_structure">
-            <!-- Hero Section Begin -->
-            <section class="hero spad set-bg" data-setbg="/theme_hiroto/static/src/img/hero.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="hero__text">
-                                <h5>WELCOME TO CHIFE</h5>
-                                <h2>Experience the greatest for you holidays.</h2>
+            <div id="wrap">
+                <div class="oe_structure"/>
+                
+                <!-- Hero Section Begin -->
+                <section class="hero spad set-bg" data-setbg="/theme_hiroto/static/src/img/hero.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="hero__text">
+                                    <h5>BIENVENUE CHEZ CHIFE</h5>
+                                    <h2>Vivez des vacances exceptionnelles chez nous.</h2>
+                                </div>
+                                <form id="book__form" action="/rooms/check" method="post" class="filter__form">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="filter__form__item filter__form__item--search">
+                                        <p>Catégorie</p>
+                                        <div class="filter__form__input">
+                                            <input type="text" placeholder="Catégorie "/>
+                                            <span class="icon_search"></span>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form__item">
+                                        <p>Arrivé</p>
+                                        <div class="filter__form__datepicker">
+                                            <span class="icon_calendar"></span>
+                                            <input t-att-min='today' type="text" class="datepicker_pop check__in" id="checkin_date" name="checkin_date" required="1"/>
+                                            <i class="arrow_carrot-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form__item">
+                                        <p>Départ</p>
+                                        <div class="filter__form__datepicker">
+                                            <span class="icon_calendar"></span>
+                                            <input t-att-min='today' type="text" id="checkout_date" name="checkout_date" required="1" class="datepicker_pop check__out"/>
+                                            <i class="arrow_carrot-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form__item filter__form__item--select" name="category_select">
+                                        <p>Adultes</p>
+                                        <div class="filter__form__select">
+                                            <span class="icon_group"></span>
+                                            <select id="room_type" name="room_type">
+                                                <option value="">2 Adult, 1 Children</option>
+                                                <option value="">2 Adult</option>
+                                                <option value="">1 Adult</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit">BOOK NOW</button>
+                                </form>
                             </div>
-                            <form id="book__form" action="/rooms/check" method="post" class="filter__form">
-                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                <div class="filter__form__item filter__form__item--search">
-                                    <p>Room</p>
-                                    <div class="filter__form__input">
-                                        <input type="text" placeholder="Search Room"/>
-                                        <span class="icon_search"></span>
-                                    </div>
-                                </div>
-                                <div class="filter__form__item">
-                                    <p>Check In</p>
-                                    <div class="filter__form__datepicker">
-                                        <span class="icon_calendar"></span>
-                                        <input t-att-min='today' type="text" class="datepicker_pop check__in" id="checkin_date" name="checkin_date" required="1"/>
-                                        <i class="arrow_carrot-down"></i>
-                                    </div>
-                                </div>
-                                <div class="filter__form__item">
-                                    <p>Check Out</p>
-                                    <div class="filter__form__datepicker">
-                                        <span class="icon_calendar"></span>
-                                        <input t-att-min='today' type="text" id="checkout_date" name="checkout_date" required="1" class="datepicker_pop check__out"/>
-                                        <i class="arrow_carrot-down"></i>
-                                    </div>
-                                </div>
-                                <div class="filter__form__item filter__form__item--select" name="category_select">
-                                    <p>Category</p>
-                                    <div class="filter__form__select">
-                                        <span class="icon_group"></span>
-                                        <select id="room_type" name="room_type">
-                                            <option value="">2 Adult, 1 Children</option>
-                                            <option value="">2 Adult</option>
-                                            <option value="">1 Adult</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button type="submit">BOOK NOW</button>
-                            </form>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- Hero Section End -->
+                </section>
+                
 
             <!-- Home About Section Begin -->
             <section class="home-about">
@@ -63,13 +65,18 @@
                         <div class="col-lg-6">
                             <div class="home__about__text">
                                 <div class="section-title">
-                                    <h5>ABOUT US</h5>
-                                    <h2>Welcome Chife Hotel In Goma</h2>
+                                    <h5>À PROPOS DE NOUS</h5>
+                                    <h2>Bienvenue chez Chife Hotel</h2>
                                 </div>
-                                <p class="first-para">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                                    fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                <p class="last-para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque.</p>
+                                <p class="first-para">
+                                   Bienvenue chez Chife Hotel, votre résidence de choix à Goma. Notre mission est simple : transformer votre voyage en 
+                                   un souvenir mémorable. 
+                                </p>
+                                
+                                <p class="last-para">
+                                    Niché dans un cadre sécurisé et 
+                                   apaisant, l'hôtel a été pensé pour être votre "chez-vous" loin de chez vous.
+                                .</p>
                                 <img src="/theme_hiroto/static/src/img/home-about/sign.png" alt=""/>
                             </div>
                         </div>
@@ -90,23 +97,27 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="services__item">
                                 <img src="/theme_hiroto/static/src/img/services/services-1.png" alt=""/>
-                                <h4>Free Wi-Fi</h4>
-                                <p>The massive investment in a hotel or resort requires constant reviews and control in order to
-                                    make it a successful investment.</p>
+                                <h4>Wi-Fi Gratuit</h4>
+                                <p>
+                                    Chez Chife Hotel, nous savons que la connectivité est essentielle pour vos affaires et vos échanges. Profitez d'un accès Wi-Fi haut débit gratuit et illimité 
+                                    dans l'ensemble de notre établissement.
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="services__item">
                                 <img src="/theme_hiroto/static/src/img/services/services-2.png" alt=""/>
-                                <h4>Premium Pool</h4>
-                                <p>Choose from 4 unique ready made concepts, let us help you create the concept perfect for you
-                                    or let HCA.</p>
+                                <h4>Piscine Premium</h4>
+                                <p>
+                                    La piscine du Chife Hotel redéfinit le luxe à Goma. Conçue pour nos hôtes les plus exigeants, 
+                                    elle allie design moderne et confort haut de gamme.
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="services__item">
                                 <img src="/theme_hiroto/static/src/img/services/services-3.png" alt=""/>
-                                <h4>Coffee Maker</h4>
+                                <h4>Cafetière</h4>
                                 <p>HCA's Owner's Representation is taking care of just these important factors, may it be
                                     through regular site visits and spot checks.</p>
                             </div>
@@ -146,8 +157,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title">
-                                <h5>OUR ROOM</h5>
-                                <h2>Explore Our Hotel</h2>
+                                <h5>NOS CHAMBRES &amp; APPARTEMENTS</h5>
+                                <h2>Explorez notre hôtel</h2>
                             </div>
                         </div>
                     </div>
@@ -157,8 +168,8 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 p-0">
                             <div class="home__room__item set-bg" data-setbg="/theme_hiroto/static/src/img/home-room/hr-1.jpg">
                                 <div class="home__room__title">
-                                    <h4>Deluxe Room</h4>
-                                    <h2><sup>$</sup>55<span>/day</span></h2>
+                                    <h4>Standar Room</h4>
+                                    <h2><sup>$</sup>80<span>/Nuité</span></h2>
                                 </div>
                                 <a href="#">Booking Now</a>
                             </div>
@@ -166,8 +177,8 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 p-0">
                             <div class="home__room__item set-bg" data-setbg="/theme_hiroto/static/src/img/home-room/hr-2.jpg">
                                 <div class="home__room__title">
-                                    <h4>Deluxe Room</h4>
-                                    <h2><sup>$</sup>85<span>/day</span></h2>
+                                    <h4>Suite executive</h4>
+                                    <h2><sup>$</sup>150<span>/Nuité</span></h2>
                                 </div>
                                 <a href="#">Booking Now</a>
                             </div>
@@ -219,8 +230,8 @@
                         <div class="col-lg-7">
                             <div class="testimonial__text">
                                 <div class="section-title">
-                                    <h5>Testimonials</h5>
-                                    <h2>What do customers say about us?</h2>
+                                    <h5>Témoignages</h5>
+                                    <h2>Que disent nos clients ?</h2>
                                 </div>
                                 <div class="testimonial__slider__content">
                                     <div class="testimonial__slider owl-carousel">
@@ -233,16 +244,15 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star-o"></i>
                                             </div>
-                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                                fugiat nulla pariatur. Excepteur sint occaecat cupidat non proident, sunt in
-                                                culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-                                                omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                                            <p>
+                                                Idéal pour mes voyages d'affaires à Goma. Le Wi-Fi est stable et rapide, ce qui est rare, et le calme de l'hôtel m'a permis de travailler sereinement. Je recommande vivement la piscine après une longue journée
+                                            </p>
                                             <div class="testimonial__author">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="testimonial__author__title">
-                                                            <h5>M. Franck</h5>
-                                                            <span>Director Chife</span>
+                                                            <h5>Gracias Kasongo</h5>
+                                                            <span>Ingénieur logiciel</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
@@ -363,10 +373,12 @@
                         <div class="col-lg-8 text-center">
                             <div class="chooseus__text">
                                 <div class="section-title">
-                                    <h5>WHY CHOOSE US</h5>
-                                    <h2>Contact us now to get the latest deals and for the next booking</h2>
+                                    <h5>POURQUOI NOUS CHOISIR</h5>
+                                    <h2>
+                                        Contactez-nous dès maintenant pour bénéficier des dernières offres et pour votre prochaine réservation.
+                                    </h2>
                                 </div>
-                                <a href="#" class="primary-btn">Booking Now</a>
+                                <a href="#" class="primary-btn">Réservez maintenant</a>
                             </div>
                         </div>
                     </div>
@@ -381,15 +393,17 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="section-title">
-                                    <h5>OUR GALLERY</h5>
-                                    <h2>Explore The Most Beautiful In The Hotel</h2>
+                                    <h5>NOTRE GALERIE</h5>
+                                    <h2>Explorez les plus beaux endroits de l'hôtel</h2>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="gallery__title">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur. Sunt in culpa qui officia deserunt mollit anim.</p>
-                                    <a href="#" class="primary-btn">View Gallery <span class="arrow_right"></span></a>
+                                    <p>
+                                        Parcourez notre galerie et découvrez l'atmosphère unique de notre établissement. Des chambres élégantes aux espaces de détente, chaque cliché témoigne de notre engagement pour 
+                                        votre confort et votre bien-être au cœur de Goma.
+                                    </p>
+                                    <a href="/gallery" class="primary-btn">View Gallery <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -399,7 +413,8 @@
                     <div class="gallery__item small__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-1.jpg"></div>
                     <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-2.jpg"></div>
                     <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-3.jpg"></div>
-                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-4.jpg"></div>
+                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-7.jpg"></div>
+                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-6.jpg"></div>
                 </div>
             </section>
             <!-- Gallery Section End -->
@@ -410,8 +425,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title">
-                                <h5>NEWS AND EVENT</h5>
-                                <h2>From Our Blog</h2>
+                                <h5>ACTUALITÉS ET ÉVÉNEMENTS</h5>
+                                <h2>Extrait de notre blog</h2>
                             </div>
                         </div>
                     </div>
