@@ -126,24 +126,29 @@
                             <div class="services__item">
                                 <img src="/theme_hiroto/static/src/img/services/services-4.png" alt=""/>
                                 <h4>Bar Wine</h4>
-                                <p>For properties with third party management companies, HCA Consultants will as well administer
-                                    the terms and conditions.</p>
+                                <p>
+                                    Détendez-vous dans notre espace Bar &amp; Lounge, où la mixologie rencontre la convivialité. Nos barmans créent pour vous des cocktails signatures, des classiques intemporels aux créations exotiques, 
+                                    le tout dans un cadre moderne et sécurisé.
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="services__item">
                                 <img src="/theme_hiroto/static/src/img/services/services-5.png" alt=""/>
                                 <h4>TV HD</h4>
-                                <p>We provide a critical analysis of a hotel's marketing strategy, bench-marking it against
-                                    industry and competitive practices.</p>
+                                <p>
+                                    Le Chife Hotel équipe toutes ses suites et chambres de téléviseurs HD grand format. Que vous souhaitiez suivre l'actualité mondiale sur les chaînes d'information ou vous détendre devant un film, 
+                                    nous vous garantissons une qualité d'image et de son irréprochable.
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="services__item">
                                 <img src="/theme_hiroto/static/src/img/services/services-6.png" alt=""/>
                                 <h4>Restaurant</h4>
-                                <p>A hotel and restaurant investment deserves careful and market oriented financial planning and
-                                    projections.</p>
+                                <p>
+                                    Le restaurant du Chife Hotel vous accueille dans un cadre élégant, idéal pour vos déjeuners d'affaires ou vos dîners en tête-à-tête.
+                                </p>
                             </div>
                         </div>
                     </div>

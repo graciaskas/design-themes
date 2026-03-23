@@ -234,7 +234,7 @@
         <field name="name">A propos</field>
         <field name="page_id" ref="theme_hiroto.aboutus_page"/>
         <field name="parent_id" ref="website.main_menu" />
-        <field name="sequence" type="int">80</field>
+        <field name="sequence" type="int">40</field>
     </record>
 
  </odoo>
