@@ -4,35 +4,46 @@
     <template id="Offcanvas" inherit_id="website.layout" name="Custom Header">
     <!-- Add an element after the top menu  -->
         <xpath expr="//header" position="before">
-           <div class="offcanvas-top-bar py-3 bg-light border-bottom">
+           <div class="offcanvas-top-bar py-2 bg-light border-bottom">
             <div class="container d-flex justify-content-between align-items-center">
                 
                 <!-- Contact Info -->
                 <div class="offcanvas__widget">
                     <ul class="d-flex list-unstyled mb-0 gap-4">
                         <li class="d-flex align-items-center">
-                            <span class="icon_pin_alt me-2"></span>
+                            <span class="icon_pin_alt "></span>
                             48, Q. Le Volcans, Goma, RDC
                         </li>
-                        <li class="d-flex align-items-center">
+                        <li class="d-flex align-items-center mx-2">
                             <span class="icon_phone me-2"></span>
                             (+243) 99 0121 302
                         </li>
                     </ul>
                 </div>
 
-                <!-- Language Selector -->
-                <div class="offcanvas__language position-relative">
-                    <div class="d-flex align-items-center cursor-pointer">
-                        <img src="/theme_hiroto/static/src/img/lan.png" alt="" class="me-2"/>
-                        <span>English</span>
-                        <i class="fa fa-angle-down ms-2"></i>
-                    </div>
-                    <ul class="dropdown-language list-unstyled position-absolute bg-white shadow-sm p-2" 
-                        style="display:none; top:100%; left:0; z-index:100;">
-                        <li class="py-1 px-2 hover-bg">English</li>
-                        <li class="py-1 px-2 hover-bg">Français</li>
-                    </ul>
+                <!-- Topbar Social Links -->
+                <div class="topbar__social d-flex align-items-center">
+
+                    <a href="#" class="me-3 text-white">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="me-3 text-white">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="me-3 text-white">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="me-3 text-white">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+
+                    <a href="#" class="text-white">
+                        <i class="fa fa-youtube-play"></i>
+                    </a>
+
                 </div>
 
             </div>
