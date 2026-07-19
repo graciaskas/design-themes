@@ -1,0 +1,9 @@
+<template id="s_zs_hero" name="ZS Hero">
+  <section class="zs-hero py-5 text-center">
+    <div class="container">
+      <h1 class="display-3">Luxury Hotel Experience</h1>
+      <p class="lead">Relax, unwind and enjoy your stay with style.</p>
+      <a class="btn btn-primary btn-lg mt-3" href="/booking">Book Now</a>
+    </div>
+  </section>
+</template>

@@ -1,0 +1,27 @@
+<template id="s_zs_pricing" name="ZS Pricing">
+  <section class="zs-pricing py-5">
+    <div class="container text-center">
+      <h2>Our Rooms</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Standard Room</h5>
+              <p class="card-text">From $150/night</p>
+              <a href="/booking" class="btn btn-primary">Book</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Deluxe Room</h5>
+              <p class="card-text">From $250/night</p>
+              <a href="/booking" class="btn btn-primary">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

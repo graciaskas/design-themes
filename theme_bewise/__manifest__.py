@@ -1,40 +1,32 @@
 {
-    'name': 'Be Wise Theme',
-    'description': 'Be Wise Theme',
-    'category': 'Theme/Education',
-    'summary': 'University, Education, Schools, Young, Play, Kids',
-    'sequence': 240,
-    'version': '2.1.0',
-    'depends': ['theme_common'],
+    'name': 'Theme: Hotel Luxury',
+    'description': 'Luxury Hotel Theme for Odoo 17',
+    'category': 'Theme/Hotel',
+    'summary': 'Hotel, Resort, Rooms, Booking, Luxury',
+    'version': '17.0.1.0.0',
+    'depends': ['theme_common'], # Très important pour hériter des styles de base
     'data': [
-        'data/generate_primary_template.xml',
-        'data/ir_asset.xml',
-        'views/image_content.xml',
-        'views/customizations.xml',
-        'views/new_page_template.xml',
+        'data/zs_ir_asset.xml',
+        'views/zs_snippets.xml',
+        'views/zs_new_page_template.xml', # Pour proposer des modèles de pages pré-faits
     ],
     'images': [
-        'static/description/bewise_description.jpg',
-        'static/description/bewise_screenshot.jpg',
+        'static/description/zs_hotel_description.jpg',
+        'static/description/zs_hotel_screenshot.jpg',
     ],
+    # Prévisualisation des images pour les snippets par défaut
     'images_preview_theme': {
-        'website.s_cover_default_image': '/theme_bewise/static/src/img/backgrounds/college_bg.jpg',
-        'website.s_text_image_default_image': '/theme_bewise/static/src/img/content/college_graduate.jpg',
-        'website.s_image_text_default_image': '/theme_bewise/static/src/img/content/college_students.jpg',
-        'website.s_media_list_default_image_1': '/theme_bewise/static/src/img/content/college_media_1.jpg',
-        'website.s_media_list_default_image_2': '/theme_bewise/static/src/img/content/college_media_2.jpg',
-        'website.s_quotes_carousel_demo_image_0': '/theme_bewise/static/src/img/backgrounds/college_bg_4.jpg',
+        'website.s_cover_default_image': '/zs_theme_hotel/static/src/img/hero_hotel.jpg',
+        'website.s_text_image_default_image': '/zs_theme_hotel/static/src/img/room_preview.jpg',
     },
+    # Définit quels blocs apparaissent sur la page d'accueil par défaut
     'configurator_snippets': {
-        'homepage': ['s_cover', 's_call_to_action', 's_text_image', 's_numbers', 's_image_text', 's_quotes_carousel', 's_color_blocks_2'],
-        # TODO In master, remove unused templates instead.
-        '_': ['s_company_team'],
+        'homepage': ['s_cover', 's_text_image', 's_image_text', 's_quotes_carousel'],
     },
     'license': 'LGPL-3',
-    'live_test_url': 'https://theme-bewise.odoo.com',
     'assets': {
-        'website.assets_editor': [
-            'theme_bewise/static/src/js/tour.js',
+        'web.assets_frontend': [
+            'zs_theme_hotel/static/src/scss/zs_style.scss',
         ],
     }
 }
