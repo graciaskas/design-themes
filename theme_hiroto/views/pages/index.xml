@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="homepage" inherit_id="website.homepage">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap">
+                <div class="oe_structure"/>
+                
+                <!-- Hero Section Begin -->
+                <section class="hero spad set-bg" data-setbg="/theme_hiroto/static/src/img/hero.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="hero__text">
+                                    <h5>BIENVENUE CHEZ CHIFE</h5>
+                                    <h2>Vivez des vacances exceptionnelles chez nous.</h2>
+                                </div>
+                                <form id="book__form" action="/rooms/check" method="post" class="filter__form">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="filter__form__item filter__form__item--search">
+                                        <p>Catégorie</p>
+                                        <div class="filter__form__input">
+                                            <input type="text" placeholder="Catégorie "/>
+                                            <span class="icon_search"></span>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form__item">
+                                        <p>Arrivé</p>
+                                        <div class="filter__form__datepicker">
+                                            <span class="icon_calendar"></span>
+                                            <input t-att-min='today' type="text" class="datepicker_pop check__in" id="checkin_date" name="checkin_date" required="1"/>
+                                            <i class="arrow_carrot-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form__item">
+                                        <p>Départ</p>
+                                        <div class="filter__form__datepicker">
+                                            <span class="icon_calendar"></span>
+                                            <input t-att-min='today' type="text" id="checkout_date" name="checkout_date" required="1" class="datepicker_pop check__out"/>
+                                            <i class="arrow_carrot-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form__item filter__form__item--select" name="category_select">
+                                        <p>Adultes</p>
+                                        <div class="filter__form__select">
+                                            <span class="icon_group"></span>
+                                            <select id="room_type" name="room_type">
+                                                <option value="">2 Adult, 1 Children</option>
+                                                <option value="">2 Adult</option>
+                                                <option value="">1 Adult</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="submit">BOOK NOW</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+
+            <!-- Home About Section Begin -->
+            <section class="home-about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="home__about__text">
+                                <div class="section-title">
+                                    <h5>À PROPOS DE NOUS</h5>
+                                    <h2>Bienvenue chez Chife Hotel</h2>
+                                </div>
+                                <p class="first-para">
+                                   Bienvenue chez Chife Hotel, votre résidence de choix à Goma. Notre mission est simple : transformer votre voyage en 
+                                   un souvenir mémorable. 
+                                </p>
+                                
+                                <p class="last-para">
+                                    Niché dans un cadre sécurisé et 
+                                   apaisant, l'hôtel a été pensé pour être votre "chez-vous" loin de chez vous.
+                                .</p>
+                                <img src="/theme_hiroto/static/src/img/home-about/sign.png" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="home__about__pic">
+                                <img src="/theme_hiroto/static/src/img/home-about/home-about.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Home About Section End -->
+
+            <!-- Services Section Begin -->
+            <section class="services spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="services__item">
+                                <img src="/theme_hiroto/static/src/img/services/services-1.png" alt=""/>
+                                <h4>Wi-Fi Gratuit</h4>
+                                <p>
+                                    Chez Chife Hotel, nous savons que la connectivité est essentielle pour vos affaires et vos échanges. Profitez d'un accès Wi-Fi haut débit gratuit et illimité 
+                                    dans l'ensemble de notre établissement.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="services__item">
+                                <img src="/theme_hiroto/static/src/img/services/services-2.png" alt=""/>
+                                <h4>Piscine Premium</h4>
+                                <p>
+                                    La piscine du Chife Hotel redéfinit le luxe à Goma. Conçue pour nos hôtes les plus exigeants, 
+                                    elle allie design moderne et confort haut de gamme.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="services__item">
+                                <img src="/theme_hiroto/static/src/img/services/services-3.png" alt=""/>
+                                <h4>Cafetière</h4>
+                                <p>HCA's Owner's Representation is taking care of just these important factors, may it be
+                                    through regular site visits and spot checks.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="services__item">
+                                <img src="/theme_hiroto/static/src/img/services/services-4.png" alt=""/>
+                                <h4>Bar Wine</h4>
+                                <p>
+                                    Détendez-vous dans notre espace Bar &amp; Lounge, où la mixologie rencontre la convivialité. Nos barmans créent pour vous des cocktails signatures, des classiques intemporels aux créations exotiques, 
+                                    le tout dans un cadre moderne et sécurisé.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="services__item">
+                                <img src="/theme_hiroto/static/src/img/services/services-5.png" alt=""/>
+                                <h4>TV HD</h4>
+                                <p>
+                                    Le Chife Hotel équipe toutes ses suites et chambres de téléviseurs HD grand format. Que vous souhaitiez suivre l'actualité mondiale sur les chaînes d'information ou vous détendre devant un film, 
+                                    nous vous garantissons une qualité d'image et de son irréprochable.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="services__item">
+                                <img src="/theme_hiroto/static/src/img/services/services-6.png" alt=""/>
+                                <h4>Restaurant</h4>
+                                <p>
+                                    Le restaurant du Chife Hotel vous accueille dans un cadre élégant, idéal pour vos déjeuners d'affaires ou vos dîners en tête-à-tête.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Services Section End -->
+
+            <!-- Home Room Section Begin -->
+            <section class="home-room spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h5>NOS CHAMBRES &amp; APPARTEMENTS</h5>
+                                <h2>Explorez notre hôtel</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                            <div class="home__room__item set-bg" data-setbg="/theme_hiroto/static/src/img/home-room/hr-1.jpg">
+                                <div class="home__room__title">
+                                    <h4>Standar Room</h4>
+                                    <h2><sup>$</sup>80<span>/Nuité</span></h2>
+                                </div>
+                                <a href="#">Booking Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                            <div class="home__room__item set-bg" data-setbg="/theme_hiroto/static/src/img/home-room/hr-2.jpg">
+                                <div class="home__room__title">
+                                    <h4>Suite executive</h4>
+                                    <h2><sup>$</sup>150<span>/Nuité</span></h2>
+                                </div>
+                                <a href="#">Booking Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                            <div class="home__room__item set-bg" data-setbg="/theme_hiroto/static/src/img/home-room/hr-3.jpg">
+                                <div class="home__room__title">
+                                    <h4>Deluxe Room</h4>
+                                    <h2><sup>$</sup>94<span>/day</span></h2>
+                                </div>
+                                <a href="#">Booking Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                            <div class="home__room__item set-bg" data-setbg="/theme_hiroto/static/src/img/home-room/hr-4.jpg">
+                                <div class="home__room__title">
+                                    <h4>Deluxe Room</h4>
+                                    <h2><sup>$</sup>71<span>/day</span></h2>
+                                </div>
+                                <a href="#">Booking Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="home__explore">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-8">
+                                <h3>Planning your next trip? Save up to 25% on your hotel</h3>
+                            </div>
+                            <div class="col-lg-3 col-md-4 text-center">
+                                <a href="#" class="primary-btn">Explorer More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Home Room Section End -->
+
+            <!-- Testimonial Section Begin -->
+            <section class="testimonial spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="testimonial__pic">
+                                <img src="/theme_hiroto/static/src/img/testimonial-left.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="testimonial__text">
+                                <div class="section-title">
+                                    <h5>Témoignages</h5>
+                                    <h2>Que disent nos clients ?</h2>
+                                </div>
+                                <div class="testimonial__slider__content">
+                                    <div class="testimonial__slider owl-carousel">
+                                        <div class="testimonial__item">
+                                            <h5>Detailed Review:</h5>
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+                                            <p>
+                                                Idéal pour mes voyages d'affaires à Goma. Le Wi-Fi est stable et rapide, ce qui est rare, et le calme de l'hôtel m'a permis de travailler sereinement. Je recommande vivement la piscine après une longue journée
+                                            </p>
+                                            <div class="testimonial__author">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__title">
+                                                            <h5>Gracias Kasongo</h5>
+                                                            <span>Ingénieur logiciel</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__social">
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial__item">
+                                            <h5>Detailed Review:</h5>
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+                                            <p>
+                                                The location is perfect—quiet yet close to all amenities. I especially appreciated the very comfortable bedding and the charming decor. An excellent place that I highly recommend
+                                            </p>
+                                            <div class="testimonial__author">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__title">
+                                                            <h5>Ir. Gracias</h5>
+                                                            <span>CEO, ZeSlap Platforms</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__social">
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial__item">
+                                            <h5>Detailed Review:</h5>
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+                                            <p>
+                                                From the warm welcome to our departure, everything was exceptional. This hotel combines discreet luxury with personalized service. It's the ideal place to relax and feel right at home, but better.</p>
+                                            <div class="testimonial__author">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__title">
+                                                            <h5>Jack Kelly</h5>
+                                                            <span>Sophie D., Montréal</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__social">
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial__item">
+                                            <h5>Detailed Review:</h5>
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                                fugiat nulla pariatur. Excepteur sint occaecat cupidat non proident, sunt in
+                                                culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+                                                omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                                            <div class="testimonial__author">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__title">
+                                                            <h5>Richard Hobson</h5>
+                                                            <span>Director Colorlib</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="testimonial__author__social">
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-num" id="snh-1"></div>
+                                    <div class="slider__progress"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial Section End -->
+
+            <!-- Chooseus Section Begin -->
+            <div class="chooseus spad set-bg" data-setbg="/theme_hiroto/static/src/img/chooseus-bg.jpg">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="chooseus__text">
+                                <div class="section-title">
+                                    <h5>POURQUOI NOUS CHOISIR</h5>
+                                    <h2>
+                                        Contactez-nous dès maintenant pour bénéficier des dernières offres et pour votre prochaine réservation.
+                                    </h2>
+                                </div>
+                                <a href="#" class="primary-btn">Réservez maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chooseus Section End -->
+
+            <!-- Gallery Section Begin -->
+            <section class="gallery spad">
+                <div class="gallery__text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="section-title">
+                                    <h5>NOTRE GALERIE</h5>
+                                    <h2>Explorez les plus beaux endroits de l'hôtel</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="gallery__title">
+                                    <p>
+                                        Parcourez notre galerie et découvrez l'atmosphère unique de notre établissement. Des chambres élégantes aux espaces de détente, chaque cliché témoigne de notre engagement pour 
+                                        votre confort et votre bien-être au cœur de Goma.
+                                    </p>
+                                    <a href="/gallery" class="primary-btn">View Gallery <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__slider owl-carousel">
+                    <div class="gallery__item small__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-1.jpg"></div>
+                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-2.jpg"></div>
+                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-3.jpg"></div>
+                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-7.jpg"></div>
+                    <div class="gallery__item set-bg" data-setbg="/theme_hiroto/static/src/img/gallery/gallery-6.jpg"></div>
+                </div>
+            </section>
+            <!-- Gallery Section End -->
+
+            <!-- Latest Blog Section Begin -->
+            <section class="latest-blog spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h5>ACTUALITÉS ET ÉVÉNEMENTS</h5>
+                                <h2>Extrait de notre blog</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 p-0 order-lg-1 col-md-6 order-md-1">
+                            <div class="latest__blog__pic set-bg" data-setbg="/theme_hiroto/static/src/img/latest-blog/lb-1.jpg"></div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-2 col-md-6 order-md-2">
+                            <div class="latest__blog__text">
+                                <div class="label">Hotel</div>
+                                <h5>Ut enim ad minim veniam, quis nostrud</h5>
+                                <p><i class="fa fa-clock-o"></i> 19th March, 2019</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-3 col-md-6 order-md-4">
+                            <div class="latest__blog__pic set-bg" data-setbg="/theme_hiroto/static/src/img/latest-blog/lb-2.jpg"></div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-4 col-md-6 order-md-3">
+                            <div class="latest__blog__text">
+                                <div class="label">Restaurant</div>
+                                <h5>Ut enim ad minim veniam, quis nostrud</h5>
+                                <p><i class="fa fa-clock-o"></i> 22th March, 2019</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-6 col-md-6 order-md-5">
+                            <div class="latest__blog__pic latest__blog__pic__last__row set-bg"
+                                data-setbg="/theme_hiroto/static/src/img/latest-blog/lb-3.jpg"></div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-5 col-md-6 order-md-6">
+                            <div class="latest__blog__text">
+                                <div class="label">Travel</div>
+                                <h5>Ut enim ad minim veniam, quis nostrud</h5>
+                                <p><i class="fa fa-clock-o"></i> 25th March, 2019</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-8 col-md-6 order-md-8">
+                            <div class="latest__blog__pic latest__blog__pic__last__row set-bg"
+                                data-setbg="/theme_hiroto/static/src/img/latest-blog/lb-4.jpg"></div>
+                        </div>
+                        <div class="col-lg-3 p-0 order-lg-7 col-md-6 order-md-7">
+                            <div class="latest__blog__text">
+                                <div class="label">Booking</div>
+                                <h5>Ut enim ad minim veniam, quis nostrud</h5>
+                                <p><i class="fa fa-clock-o"></i> 29th March, 2019</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Latest Blog Section End -->
+
+        </div >
+        </xpath>
+    </template>
+</odoo>

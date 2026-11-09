@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="custom_footer" inherit_id="website.layout">
+       <xpath expr="//div[@id='footer']" position="replace">
+           <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <!-- Footer Section Begin -->
+                <footer class="footer set-bg" data-setbg="/theme_hiroto/static/src/img/footer-bg.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="logo__carousel owl-carousel">
+                                    <div class="logo__carousel__item">
+                                        <a href="#"><img src="/theme_hiroto/static/src/img/logo/logo-1.png" alt=""/></a>
+                                    </div>
+                                    <div class="logo__carousel__item">
+                                        <a href="#"><img src="/theme_hiroto/static/src/img/logo/logo-2.png" alt=""/></a>
+                                    </div>
+                                    <div class="logo__carousel__item">
+                                        <a href="#"><img src="/theme_hiroto/static/src/img/logo/logo-3.png" alt=""/></a>
+                                    </div>
+                                    <div class="logo__carousel__item">
+                                        <a href="#"><img src="/theme_hiroto/static/src/img/logo/logo-4.png" alt=""/></a>
+                                    </div>
+                                    <div class="logo__carousel__item">
+                                        <a href="#"><img src="/theme_hiroto/static/src/img/logo/logo-5.png" alt=""/></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="footer__content">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="footer__about">
+                                        <div class="footer__logo">
+                                            <a href="#">
+                                                <img src="/theme_hiroto/static/src/img/logo.png" 
+                                                alt="Logo chife hotel goma" class="img-fluid" width="40"/></a>
+                                        </div>
+                                        <h4>(+243) 99 0121 302</h4>
+                                        <ul>
+                                            <li>
+                                                48, Q. Le Volcans / DGDA Entrance, Goma Commune
+                                                Goma City N-K
+                                                DR. of the Congo
+                                            </li>
+                                            <li>info@chifehotel.com</li>
+                                        </ul>
+                                        <div class="footer__social">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a 
+                                                target="_blank" 
+                                                href="https://www.instagram.com/chifehotel?igsh=bmMzY3U4cWxlNDd6&amp;utm_source=qr"
+                                                ><i class="fa fa-instagram"></i></a>
+                                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 offset-lg-1 col-md-5 offset-md-1 col-sm-6">
+                                    <div class="footer__widget">
+                                        <h4>Liens rapides</h4>
+                                        <ul>
+                                            <li><a href="#">Accueil</a></li>
+                                            <li><a href="#">Réservation</a></li>
+                                            <li><a href="#">À propos de nous</a></li>
+                                            <li><a href="#">Review</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Our Room</a></li>
+                                            <li><a href="#">Restaurants</a></li>
+                                            <li><a href="#">Payments</a></li>
+                                            <li><a href="#">Evenements</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-12">
+                                    <div class="footer__newslatter">
+                                        <h4>Abonnez-vous à notre newsletter</h4>
+                                        <form action="#">
+                                            <input type="text" placeholder="Adresse email"/>
+                                            <button type="submit">Subscribe</button>
+                                        </form>
+                                        <div class="footer__newslatter__find">
+                                            <h5>Retrouvez-nous :</h5>
+                                            <div class="footer__newslatter__find__links">
+                                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                                                <a href="#"><i class="fa fa-map-o"></i></a>
+                                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                                <a href="#"><i class="fa fa-forumbee"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__copyright">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-7">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    <div class="footer__copyright__text">
+                                        <p>Designed by ZeSlap Platforms</p>
+                                    </div>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </div>
+                                <!-- <div class="col-lg-5 col-md-5">
+                                    <ul class="footer__copyright__links">
+                                        <li><a href="#">Terms Of Use</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer Section End -->
+           </div>
+       </xpath>
+   </template>
+
+
+</odoo>

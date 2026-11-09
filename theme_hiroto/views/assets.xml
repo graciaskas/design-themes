@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FRONTEND ASSETS -->
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+
+            <!-- CSS -->
+            <link rel="stylesheet" href="/theme_hiroto/static/src/css/font-awesome.min.css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/src/css/elegant-icons.css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/src/css/nice-select.css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/src/css/owl.carousel.min copy.css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/src/css/slicknav.min copy.css"/>
+            <link rel="stylesheet" href="/theme_hiroto/static/src/css/style.css"/>
+
+            <!-- JS -->
+            <script src="/theme_hiroto/static/src/js/jquery.nice-select.min.js"></script>
+            <script src="/theme_hiroto/static/src/js/jquery-ui.min.js"></script>
+            <script src="/theme_hiroto/static/src/js/jquery.slicknav.js"></script>
+            <script src="/theme_hiroto/static/src/js/owl.carousel.min.js"></script>
+       
+            <script src="/theme_hiroto/static/src/js/main.js"></script>
+
+        </xpath>
+    </template>
+
+    <!-- VARIABLES SCSS -->
+    <template id="_assets_primary_variables" inherit_id="website._assets_primary_variables">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/src/scss/primary_variables.scss"/>
+        </xpath>
+    </template>
+
+    <!-- BOOTSTRAP OVERRIDE -->
+    <template id="_assets_frontend_helpers" inherit_id="website._assets_frontend_helpers">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/theme_hiroto/static/src/scss/bootstrap_overridden.scss"/>
+        </xpath>
+    </template>
+
+    <!-- EDITOR JS -->
+    <template id="my_js" inherit_id="website.assets_editor">
+        <xpath expr="." position="inside">
+            <script src="/theme_hiroto/static/src/js/tutorial_editor.js"/>
+        </xpath>
+    </template>
+
+</odoo>
